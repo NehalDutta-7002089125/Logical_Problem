@@ -1,24 +1,39 @@
 ﻿using System;
 
-namespace Fabonacchi
+namespace Perfectno
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-           
-            int a = 0, b = 1, c;
-           Console.WriteLine(a);
-            Console.WriteLine(b);
+            int a = 0;
 
-               for (int i = 0; i < 10; i++)
-               {
-                c = a + b;
-                a++;
-                b++;
-             
-                Console.WriteLine(c);
-               }
+            Console.WriteLine("Enter a number");
+
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i < b; i++)
+            {
+
+
+                if (b % i == 0)
+                {
+                    a = a + i;
+                }
+            }
+
+            if (a == b)
+
+            {
+                Console.WriteLine(b+ " is a pefect number");
+
+            }
+            else
+
+            {
+                Console.WriteLine(b+ " is not a perfect number");
+
+            }
         }
     }
 }
