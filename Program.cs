@@ -1,31 +1,25 @@
 ﻿using System;
 
-namespace MonthlyPayment
+namespace squareroot
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            double  P, Y, R, n, r, Payment;
+               Console.WriteLine("Enter a number : ");
 
-            Console.WriteLine("Enter Loan Amount : ");
+            double c = Convert.ToDouble(Console.ReadLine());
+            
+            double t = c;  
+            
+            double EPSILON = 1e-15;
 
-            P = Convert.ToDouble(Console.ReadLine());
+            while (Math.Abs(t * t - c) > EPSILON) 
 
-            Console.WriteLine("No. of years to pay the principle amount : ");
-
-            Y = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Enter rate of interest : ");
-
-            R = Convert.ToDouble(Console.ReadLine());
-
-            n = 12 * Y; r = R / (12 * 100);
-
-            Payment = (P * r) / (1 - Math.Pow(1 + r, -n));
-
-            Console.WriteLine(Payment);
-
+            {
+                t = (c / t + t) / 2.0; 
+            }
+            Console.WriteLine("The square root of c is :"+t);
         }
     }
 }
