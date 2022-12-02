@@ -1,28 +1,28 @@
 ﻿using System;
+using System.Diagnostics;
 
-namespace Reverseno
+namespace stopwatch
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int reverse =0, R, a;
+           
+            Stopwatch stopwatch = new Stopwatch();
 
-            Console.WriteLine("Enter the number");
-            a = Convert.ToInt32(Console.ReadLine());
+             stopwatch.Start();
 
-            while (a >0)
+            for (int i = 0; i <10; i++)
             {
 
-                R = a %10;
-
-                reverse = reverse *10 +R;
-
-                a /= 10;
+                Console.WriteLine("HI");
 
             }
+           
+            stopwatch.Stop();
 
-            Console.WriteLine("The number has been reversed "+reverse);
+            Console.WriteLine("Time Elapsed : {0}", stopwatch.Elapsed);
+
         }
     }
 }
