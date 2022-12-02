@@ -1,39 +1,35 @@
 ﻿using System;
 
-namespace Perfectno
+namespace PrimeNo
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int a = 0;
+            int a, i;
 
-            Console.WriteLine("Enter a number");
+            Console.Write("Enter a number : ");
 
-            int b = Convert.ToInt32(Console.ReadLine());
+            a = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i < b; i++)
+            for (i =2; i <a / 2; i++)
+
             {
+                if (a % i == 0)
 
-
-                if (b % i == 0)
                 {
-                    a = a + i;
+                    Console.Write(a + "is not a Prime number.");
+
                 }
-            }
 
-            if (a == b)
+                else
 
-            {
-                Console.WriteLine(b+ " is a pefect number");
+                {
 
-            }
-            else
-
-            {
-                Console.WriteLine(b+ " is not a perfect number");
-
+                    Console.Write(a + " is a Prime number.");
+                }
             }
         }
     }
 }
+
