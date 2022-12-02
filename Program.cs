@@ -1,35 +1,28 @@
 ﻿using System;
 
-namespace PrimeNo
+namespace Reverseno
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int a, i;
+            int reverse =0, R, a;
 
-            Console.Write("Enter a number : ");
+            Console.WriteLine("Enter the number");
+            a = Convert.ToInt32(Console.ReadLine());
 
-            a = int.Parse(Console.ReadLine());
-
-            for (i =2; i <a / 2; i++)
-
+            while (a >0)
             {
-                if (a % i == 0)
 
-                {
-                    Console.Write(a + "is not a Prime number.");
+                R = a %10;
 
-                }
+                reverse = reverse *10 +R;
 
-                else
+                a /= 10;
 
-                {
-
-                    Console.Write(a + " is a Prime number.");
-                }
             }
+
+            Console.WriteLine("The number has been reversed "+reverse);
         }
     }
 }
-
