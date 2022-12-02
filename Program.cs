@@ -1,27 +1,24 @@
 ﻿using System;
-using System.Diagnostics;
 
-namespace stopwatch
+namespace TempConversion
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void temp()
         {
-           
-            Stopwatch stopwatch = new Stopwatch();
+            
+            int C = 6;
+            int F = 8;
+            
+                F = (C * 9 / 5) + 32;
+                Console.WriteLine("F:" + F);
 
-             stopwatch.Start();
-
-            for (int i = 0; i <10; i++)
-            {
-
-                Console.WriteLine("HI");
-
-            }
-           
-            stopwatch.Stop();
-
-            Console.WriteLine("Time Elapsed : {0}", stopwatch.Elapsed);
+            int c=6, f=8;
+                c = (f + 1);
+                
+                Console.WriteLine("c:" + c);
+                
+            
 
         }
     }
