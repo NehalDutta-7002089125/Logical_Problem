@@ -11,7 +11,7 @@ namespace Fabonacchi
            Console.WriteLine(a);
             Console.WriteLine(b);
 
-               for (int i = 0; i < 10; i++)
+               for (int i = 0; i <10; i++)
                {
                 c = a + b;
                 a++;
